@@ -8,7 +8,7 @@ export function renderQuestion(question, onSelect) {
   question.choices.forEach((choice, index) => {
     const button = document.createElement("button");
     button.textContent = choice;
-    button.addEventListener("click", () => onSelect(index));
+    button.addEventListener("click", () => onSelect(index, button));
     choicesContainer.appendChild(button);
   });
 }
